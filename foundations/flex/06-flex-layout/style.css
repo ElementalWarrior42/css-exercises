@@ -5,6 +5,9 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+  /*changed*/
+  display: flex;
+  flex-direction: column;
 }
 
 img {
@@ -16,6 +19,8 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
+  /*changed*/
+  padding: 8px 16px; /*should supply two values, although this isn't super important (values here do not need a comma to seperate them)*/
 }
 
 input {
@@ -23,4 +28,41 @@ input {
   border-radius: 16px;
   padding: 8px 24px;
   width: 400px;
+}
+
+/*added*/
+
+.footer,
+.header {
+	display: flex;
+	justify-content: space-between;
+	padding: 16px;
+}
+
+.footer{
+	background-color: lightgrey;
+}
+
+ul {
+	display:flex;
+	list-style-type: none;
+	/*initially used max-width on the header and footer to make them smaller, should instead set the ul to have no margin */
+	margin: 0;
+	padding: 0px;
+	gap: 16px;
+}
+
+.content {
+	display: flex;
+	/*initially set the body to use justify-content: space-between, but solution used flex: 1 on content, not sure if mine was incorrect, but the site looked the same so idk*/
+	flex: 1;
+	flex-direction: column;
+	justify-content:center;
+	align-items: center;
+	gap: 16px;
+}
+
+a {
+	text-decoration: none;
+	color: grey;
 }
